@@ -3,27 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sing In</title>
+    <title>Login Page</title>
 
-    <!-- TailwindCSS And Daisy Ui-->
-       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS And Daisy UI -->
+
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+      <!--Font Awesome CDN-->
 
-      <!-- CSS Links-->
-         <link rel="stylesheet" href="style/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <!-- Font Awesome CDN -->
+<body class="bg-[#F9FAFB] h-svh flex  justify-center  items-center">
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center space-y-3 w-md">
+            <!--Icons-->
+            <div class="w-fit p-4">
+             <i class="fa-brands fa-github text-8xl"></i>
+           </div>
+             <h2 class="text-[#111827] text-2xl font-semibold ">GitHub Issues Tracker</h2>
+             <p class="text-[#4A5565]">Sign in to manage your issues</p>
 
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+             <!-- Email Input Field -->
+             <form class="w-full flex items-center flex-col mt-4 gap-3">
+                 <div class="w-full">
+                <p class="text-[16px] text-[#111827] font-medium mb-1">Username</p>
+                <label class="input validator w-full  rounded-xl">
 
-       <!-- Google Font -->
+              <input type="email" id="email" class="w-full" placeholder="Enter Username" required />
+             </label>
+              <a href="#" class="text-[#4A00FF]">Default: admin</a>
+              <div class="validator-hint hidden">Enter valid email address</div>
+                </div>
 
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-     
+                 <!-- Password Input Field-->
+                   <div class="w-full">
+                  <p class="text-[16px] font-medium text-[#111827] mb-1">Password</p>
+                 <label class="input validator w-full  rounded-xl">
+              
+                <input id="password"
+                type="password"
+                required
+                 placeholder="Enter Password"
+                title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+              />
+                </label>
+                 <a href="#" class="text-[#4A00FF]">Default: admin123</a>
+                <p class="validator-hint hidden">
+                Must be more than 8 characters, including
+                <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
+                 </p>
+                   </div>
+
+                   <button id="signinBtn" type="submit" class=" w-full bg-[#4F46E5] text-white py-2 rounded-xl">Sign In</button>
+
+                   <!-- Separator Or-->
+                    <div class="divider text-[#1F2937] text-sm text-xl">OR</div>
+
+                    <!-- Demo Credential Card -->
+            <div class="w-full text-center">
+             <p class="text-xs text-[#64748B] mb-2">Demo Credentials:</p>
+            <div class="bg-[#F8FAFC] border border-dashed border-gray-200 p-4 rounded-xl inline-block w-full">
+            <p class="text-sm">
+            <strong class="text-[#1F2937]">Username:</strong> 
+            <span class="text-[#64748B]">admin</span>
+            </p>
+               <p class="text-sm">
+               <strong class="text-[#1F2937]">Password:</strong> 
+                <span class="text-[#64748B]">admin123</span>
+               </p>
+              </div>
+               </div>
+                     
+             </form>
+        </div>
+
+        <!-- JS -->
+         <script src="./script/index.js"></script>
 </body>
 </html>
