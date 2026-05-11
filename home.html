@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+     <!-- Tailwind CSS And Daisy UI -->
+
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+       <!-- Google Font -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+      <!--Font Awesome CDN-->
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+       <style>
+          *{
+              font-family: "Geist", sans-serif;
+          }
+      </style>
+
+</head>
+<body class="bg-[#F9FAFB] min-h-screen">
+      <header class="bg-[#FFFFFF] p-3">
+          <nav class="flex  justify-between container">
+               <div class="flex w-fit">
+                  <i class="fa-brands fa-github text-4xl"></i>
+                  <h2 class="text-2xl font-semibold text-[#1F2937]">GitHub Issues Tracker</h2>
+               </div>
+
+               <div class="flex  items-center  gap-2">
+                  <!-- Search Input Field -->
+                   <div class="relative">
+                    <input id="searchInput" type="text" placeholder="Search Products..." class="input pl-8 " />
+
+                   <i class="fa-solid fa-magnifying-glass absolute top-1/2 -translate-y-1/2 left-2 "></i>
+                </div>
+                  <button  id="searchBtn" class="btn bg-[#4F46E5] hover:bg-[#4F46E5]/90 text-white"><i class="fa-solid fa-plus"></i>New Issue</button>
+               </div>
+          </nav>
+      </header>
+
+      <main class="mx-auto container py-8">
+          <section class="w-full">
+              
+
+            <!-- Cart -->
+                <div  id="cartContainer" class=" grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 ">
+                   <!--Carts-->
+                </div>
+          </section>
+      </main>
+
+      <!-- JS Connect -->
+       <script src="./script/home.js"></script>
+</body>
+</html>

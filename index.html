@@ -10,10 +10,24 @@
       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+      <!-- Google Font -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
       <!--Font Awesome CDN-->
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
+      <style>
+          *{
+              font-family: "Geist", sans-serif;
+          }
+      </style>
+</head>
 <body class="bg-[#F9FAFB] h-svh flex  justify-center  items-center">
       <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center space-y-3 w-md">
             <!--Icons-->
@@ -26,21 +40,20 @@
              <!-- Email Input Field -->
              <form class="w-full flex items-center flex-col mt-4 gap-3">
                  <div class="w-full">
-                <p class="text-[16px] text-[#111827] font-medium mb-1">Username</p>
+                <p class="text-[16px] text-[#111827] font-medium mb-2">Username</p>
                 <label class="input validator w-full  rounded-xl">
 
-              <input type="email" id="email" class="w-full" placeholder="Enter Username" required />
+              <input type="email" id="emailInput" class="w-full" placeholder="Enter Username" required />
              </label>
               <a href="#" class="text-[#4A00FF]">Default: admin</a>
-              <div class="validator-hint hidden">Enter valid email address</div>
-                </div>
+            
 
                  <!-- Password Input Field-->
                    <div class="w-full">
-                  <p class="text-[16px] font-medium text-[#111827] mb-1">Password</p>
+                  <p class="text-[16px] font-medium text-[#111827] mb-2">Password</p>
                  <label class="input validator w-full  rounded-xl">
               
-                <input id="password"
+                <input id="passwordInput"
                 type="password"
                 required
                  placeholder="Enter Password"
@@ -48,6 +61,12 @@
               />
                 </label>
                  <a href="#" class="text-[#4A00FF]">Default: admin123</a>
+
+                     <!-- Checkbox-->
+                    <div class="flex m-3">
+                     <input type="checkbox" class="checkbox" />
+                       <p>Remember Me</p>
+                      </div>
                 <p class="validator-hint hidden">
                 Must be more than 8 characters, including
                 <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
@@ -57,7 +76,7 @@
                    <button id="signinBtn" type="submit" class=" w-full bg-[#4F46E5] text-white py-2 rounded-xl">Sign In</button>
 
                    <!-- Separator Or-->
-                    <div class="divider text-[#1F2937] text-sm text-xl">OR</div>
+                    <div class="divider text-[#1F2937] text-sm  text-xl">OR</div>
 
                     <!-- Demo Credential Card -->
             <div class="w-full text-center">
