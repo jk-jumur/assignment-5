@@ -52,12 +52,12 @@
           <section class="w-full">
               <!-- Select Btn -->
                 <div class="bg-white rounded-xl shadow-sm  hover:shadow-md p-5 mb-3 flex gap-2">
-                    <button class="btn btn-primary">All</button>
-                    <button class="btn btn-ghoest text-[#64748B]">Open</button>
-                    <button class="btn btn-ghoest text-[#64748B]">Closed</button>
+                    <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+                    <button class="btn btn-ghoest text-[#64748B] filter-btn" data-filter="open">Open</button>
+                    <button class="btn btn-ghoest text-[#64748B] filter-btn" data-filter="closed">Closed</button>
                 </div>
               <!-- Total Issues -->
-                <div class="flex justify-between bg-white p-3.5 rounded-t-xl">
+                <div  class="flex justify-between bg-white p-3.5 rounded-t-xl">
                     <div class="flex gap-2">
                     
                         <img src="./icon/Vector.png" alt="" class="w-12 h-12 bg-[#ECE4FF] py-3 px-3 rounded-full">
@@ -80,12 +80,15 @@
                    </div> 
                  </div>
                  <hr class="text-gray-300">
+
               <!--Loading Spinner-->
+
                    <div  id="loading" class="flex  items-center  justify-center">
-              <span class="loading loading-spinner loading-xl"></span>
-              <span class="loading loading-spinner loading-xl"></span>
-               <span class="loading loading-spinner loading-xl"></span>
-                 </div>
+                  <span class="loading loading-spinner loading-xl"></span>
+                  <span class="loading loading-spinner loading-xl"></span>
+                  <span class="loading loading-spinner loading-xl"></span>
+                   </div>
+
             <!-- issuesCart -->
                 <div  id="issuesCartContainer" class=" bg-white grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 ">
                    <!--Carts-->
@@ -94,6 +97,7 @@
       </main>
 
       <!-- JS Connect -->
-       <script src="./script/home.js"></script>
+        <script src="./script/home.js"></script> 
+       <!-- <script src="index3.js"></script> -->
 </body>
 </html>
