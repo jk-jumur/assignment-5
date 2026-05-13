@@ -175,14 +175,14 @@ const displayIssueCarts = (issueCarts) => {
 
         <p class="text-[#64748B] line-clamp-2">${cart.description}</p>
 
-        <!---label--->
-         <div class="labelContainer flex flex-wrap   gap-x-2 gap-y-1 mt-3">
+        <!--- label --->
+         <div class="flex flex-wrap  gap-x-2 gap-y-1 mt-3">
           ${labelsMarkup}
          </div>
 
         <hr class="text-gray-300 mt-3">
 
-        <p class="text-[#64748B]">#1 by ${cart.assignee}</p>
+        <p class="text-[#64748B]">#1 by ${cart.assignee || cart.author}</p>
         <p class="text-[#64748B]">1/15/2024</p>
       </div>
 
@@ -194,7 +194,7 @@ const displayIssueCarts = (issueCarts) => {
           <!-- Title -->
           <h2 class="text-2xl font-bold text-[#1F2937] mb-4">${cart.title}</h2>
 
-         
+      
           <div class="flex items-center gap-3 mb-6">
             <span class="${
               cart.status === "open" ? "bg-[#00A96E]" : "bg-purple-300"
@@ -207,9 +207,13 @@ const displayIssueCarts = (issueCarts) => {
             </div>
             <div class="flex items-center gap-2 text-sm text-gray-500">
               <span class="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              <p>${cart.updatedAt || '22/02/2026'}</p>
-            </div>
-          </div>
+              <p>${new Date (cart?.updatedAt).toLocaleDateString('en-US', {
+                     year: 'numeric',
+                     month: '2-digit',
+                     day: '2-digit',
+                      }) || '22/02/2026'}</p>
+                  </div>
+              </div>
 
           <!-- Labels in Modal -->
           <div class="flex flex-wrap gap-2 mb-6">
@@ -231,8 +235,8 @@ const displayIssueCarts = (issueCarts) => {
             <div>
               <p class="text-gray-400 text-xs uppercase font-bold mb-1">Priority:</p>
               <span class="${
-                cart.priority === "high" ? "text-[#EF4444]" : 
-                cart.priority === "medium" ? "text-[#D97706]" : "text-[#9CA3AF]"
+                cart.priority === "high" ? " bg-[#EF4444] text-white py-1 px-3 rounded-full" : 
+                cart.priority === "medium" ? " bg-[#D97706] text-white py-1 px-3 rounded-full" : " bg-[#9CA3AF] text-white py-1 px-3 rounded-full"
               } font-extrabold uppercase text-sm">
                 ${cart.priority}
               </span>
@@ -242,7 +246,7 @@ const displayIssueCarts = (issueCarts) => {
           <!-- Close Button -->
           <div class="modal-action">
             <form method="dialog">
-              <button class="btn bg-[#4A00FF] hover:bg-[#3b00cc] text-white border-none px-8 rounded-lg capitalize">
+              <button class="btn bg-[#4A00FF] hover:bg-[#3b00cc] text-white  border-none outline-none  px-8 rounded-lg capitalize">
                 Close
               </button>
             </form>

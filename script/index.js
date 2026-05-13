@@ -5,7 +5,7 @@ signinBtn.addEventListener("click", ()=>{
       const emailInputValue = document.getElementById("emailInput")
       .value
       const passwordInputValue = document.getElementById("passwordInput").value
-    //   console.log( emailInputValue, passwordInputValue);
+   
 
      if(!emailInputValue || !passwordInputValue){
           alert("Please provide the email and password");
